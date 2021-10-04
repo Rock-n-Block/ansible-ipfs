@@ -114,3 +114,10 @@
     name: ipfs
     state: started
     enabled: yes
+
+- name: start IPFS daemon
+  become: yes
+  become_user: ipfs
+  command: /usr/local/bin/ipfs deamon &
+  notify: restart IPFS
+
