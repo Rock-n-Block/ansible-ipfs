@@ -118,6 +118,6 @@
 - name: start IPFS daemon
   become: yes
   become_user: ipfs
-  command: /usr/local/bin/ipfs deamon &
+  command: /usr/local/bin/ipfs daemon &
   notify: restart IPFS
 
